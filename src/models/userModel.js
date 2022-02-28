@@ -3,7 +3,8 @@ const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
 
-    userName : {type : String,  unique : true, trim : true} 
+    userName : {type : String,  unique : true, trim : true} ,
+    createdAt : {type : String}
 
 }, )
 

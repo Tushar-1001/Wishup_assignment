@@ -1,7 +1,6 @@
 const userModel = require("../models/userModel");
 
-
-const date = require('date-and-time');
+const date = require("date-and-time");
 
 const validator = require("../validators/validator");
 
@@ -18,27 +17,31 @@ const userCreation = async (req, res) => {
         .send({ status: false, msg: `${userName} is already registered.` });
     }
 
-    await userModel.create({ userName });
-
-    const responseBody = {
+    await userModel.create({
       userName,
-      createdAt: date.format(new Date(), 'YYYY-MM-DD HH:mm:ss')
-    };
+      createdAt: date.format(new Date(), "YYYY-MM-DD HH:mm:ss"),
+    });
 
-    return res.status(200).send('User Created');
+    return res.status(200).send("User Created");
   } catch (error) {
     return res.status(500).send({ status: false, message: error.message });
   }
 };
 
-
 //Fetching User
 const fetchUser = async (req, res) => {
-
-
-
-
   try {
+    const userName = req.params.userName;
+
+    const findUser = await userModel.findOne({ userName });
+
+    if (!findUser) {
+      return res
+        .status(400)
+        .send({ status: false, message: `${userName} doesn't exist.` });
+    }
+
+    return res.status(200).send({ findUser });
   } catch (error) {
     return res.status(500).send({ status: false, message: error.message });
   }
