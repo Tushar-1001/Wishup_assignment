@@ -33,6 +33,9 @@
 - **Sample input**
   - _GET /user/tushar_
 - **Sample Output**
+
+
+
 ```yaml
 {
     user_name : "Tushar Saini",
@@ -97,7 +100,7 @@
 
 
 
- - Postman sample
+ - Postman samples
  ![A Postman collection sample](assets/1.JPG)
  ![A Postman collection sample](assets/2.JPG)
  ![A Postman collection sample](assets/3.JPG)
