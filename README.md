@@ -42,6 +42,10 @@
     created_at : "2022-02-28 20:30:05"
 }
 ```
+
+ - Postman sample
+ ![A Postman collection sample](assets/1.JPG)
+
 ### POST /subscription
 - This is the primary API being tested in this assignment.
 - Register a new subscription for an existing user, with a specified plan and start date.
@@ -60,6 +64,10 @@
         amount : "-200.0"
     }
     ```
+    
+ - Postman sample
+ ![A Postman collection sample](assets/2.JPG)
+
 - On success, return 200 HTTP status code. For failures, pick an appropriate status code for it.
 - The timestamps indicates the start date for the new plan, and it will be valid for the number of days shown in 
 the table below.
@@ -100,12 +108,10 @@ the table below.
         valid_till : "2022-03-05"
     }
     ```
-
-
-
- - Postman samples
- ![A Postman collection sample](assets/1.JPG)
- ![A Postman collection sample](assets/2.JPG)
+    
+ - Postman sample
  ![A Postman collection sample](assets/3.JPG)
+
+
 
  
