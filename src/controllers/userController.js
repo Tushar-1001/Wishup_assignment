@@ -2,13 +2,13 @@ const userModel = require("../models/userModel");
 
 const date = require("date-and-time");
 
-const validator = require("../validators/validator");
 
-//User Creation API
+//User Creation API..............
 const userCreation = async (req, res) => {
   try {
     const userName = req.params.userName;
 
+    //Searhing user in database
     const searchUser = await userModel.findOne({ userName });
 
     if (searchUser) {
@@ -19,7 +19,7 @@ const userCreation = async (req, res) => {
 
     await userModel.create({
       userName,
-      createdAt: date.format(new Date(), "YYYY-MM-DD HH:mm:ss"),
+      createdAt: new Date,
     });
 
     return res.status(200).send("User Created");
@@ -28,12 +28,13 @@ const userCreation = async (req, res) => {
   }
 };
 
-//Fetching User
+//Fetching User API...........
 const fetchUser = async (req, res) => {
   try {
     const userName = req.params.userName;
 
-    const findUser = await userModel.findOne({ userName });
+    //Searhing user in database
+    const findUser = await userModel.findOne({ userName }).select({_id:0 , __v :0} );
 
     if (!findUser) {
       return res
@@ -41,7 +42,7 @@ const fetchUser = async (req, res) => {
         .send({ status: false, message: `${userName} doesn't exist.` });
     }
 
-    return res.status(200).send({ findUser });
+    return res.status(200).send({ data : findUser });
   } catch (error) {
     return res.status(500).send({ status: false, message: error.message });
   }

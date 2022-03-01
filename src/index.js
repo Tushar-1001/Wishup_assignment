@@ -6,8 +6,10 @@ const route = require("./routes/route");
 
 const app = express();
 
+// app.use(express.json());
+
 app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/", route);
 
@@ -19,5 +21,5 @@ mongoose
   .catch((err) => console.log(err));
 
 app.listen(3000, function () {
-  console.log("Express app running on port" + 3000);
+  console.log("Express app running on port " + 3000);
 });
