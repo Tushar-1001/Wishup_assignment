@@ -98,7 +98,8 @@
 
 
  - Postman sample
- ![A Postman collection sample](assets/PostmanSample1.JPG)
- ![A Postman collection sample](assets/PostmanSample2.JPG)
- ![A Postman collection sample](assets/PostmanSample3.JPG)
+ ![A Postman collection sample](assets/1.JPG)
+ ![A Postman collection sample](assets/2.JPG)
+ ![A Postman collection sample](assets/3.JPG)
+
  
