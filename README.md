@@ -96,7 +96,9 @@
     ```
 
 
-    - Postman sample
- ![A Postman collection sample](assets/Postman Sample 1.JPG)
- ![A Postman collection sample](assets/Postman Sample 2.JPG)
- ![A Postman collection sample](assets/Postman Sample 3.JPG)
+
+ - Postman sample
+ ![A Postman collection sample](assets/PostmanSample1.JPG)
+ ![A Postman collection sample](assets/PostmanSample2.JPG)
+ ![A Postman collection sample](assets/PostmanSample3.JPG)
+ 
